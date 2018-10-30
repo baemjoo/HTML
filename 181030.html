@@ -1,0 +1,153 @@
+<!<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+ <meta charset="utf-8">
+ <title>HTML Style</title>
+</head>
+
+<body>
+<br><br><br>
+ <h1 style="color:orange;text-align:center;font-size:200%">2018-10-30</h1>
+<br><br><br>
+
+<h2 style="color:rgb(192,192,192)">초심으로 돌아가 웹을 공부하고 있다.</h2>
+<h2 style="color:#008088">어떤색이 나올까</h2>
+
+
+<style>
+    a:link    { color: balck; } <!--한번도 방문하지 않았을 때의 색상-->
+    a:visited { color: red; text-decoration: none }  <!--한번 방문했던 링크색상-->
+    a:hover   { color: yellow; text-decoration: none } <!--마우스를 올려놨을 때 색상-->
+    a:active  { color: blue; text-decoration: none }  <!--클릭했을 때의 색상-->
+</style>
+
+<h2><a href="file:///C:/Users/bmj/Desktop/Web_HTML/181029.html" target="_blank">blank</a></h2>
+<h2><a href="file:///C:/Users/bmj/Desktop/Web_HTML/181029.html" target="_self">self</a></h2>
+<h2><a href="file:///C:/Users/bmj/Desktop/Web_HTML/181029.html" target="_parent">parent</a></h2>
+<h2><a href="file:///C:/Users/bmj/Desktop/Web_HTML/181029.html" target="_top">top</a></h2>
+<h2><a href="file:///C:/Users/bmj/Desktop/Web_HTML/181029.html" target="myframe">myframe</a></h2>
+<iframe name="myframe" style="width:100%; height: 300px"></iframe>
+
+<h2><a href="#bookmark"><p>페이지 7로</p></a></h2>
+
+<h2>제 1</h2>
+<p>제 1단락</p>
+
+<h2>제 2</h2>
+<p>제 2단락</p>
+
+<h2>제 3</h2>
+<p>제 3단락</p>
+
+<h2>제 4</h2>
+<p>제 4단락</p>
+
+<h2>제 5</h2>
+<p>제 5단락</p>
+
+<h2>제 6</h2>
+<p>제 6단락</p>
+
+<h2><a name="bookmark"></a>제 7</h2>
+<p>제 7단락</p>
+
+<h2>제 8</h2>
+<p>제 8단락</p>
+
+<h2>제 9</h2>
+<p>제 9단락</p>
+
+<style>
+  img{
+    width:40%;
+    border:3px solid black;
+  }
+</style>
+
+<h2>이미지 크기 설정</h2>
+<a href="file:///C:/Users/bmj/Desktop/Web_HTML/181029.html" target="_blank">
+<img src="C:\Users\bmj\Desktop\Web_HTML\tae.jpg" alt="html size" width="320" height="214">
+</a>
+<br>
+<img src="C:\Users\bmj\Desktop\Web_HTML\tae.jpg" alt="style size" width="320px" height="214px">
+
+<br><br>
+
+<img src="C:\Users\bmj\Desktop\Web_HTML\tae.jpg" alt="건곤감리" usemap="#vending" width="320px" height="240px">
+<map name="vending">
+  <area shape="rect" coords="30,70,200,200" alt="건"
+  href="file:///C:/Users/bmj/Desktop/Web_HTML/181029.html">
+</map>
+
+
+<br><br>
+
+<h2>순서가 없는 리스트</h2>
+<p>검정색 작은 원 모양 (기본설정)</p>
+<ul>
+  <li>사과</li>
+  <li>멜론</li>
+  <li>바나나</li>
+</ul>
+
+<p>흰색 작은 원 모양</p>
+<ul style="list-style-type: circle">
+  <li>수박</li>
+  <li>참외</li>
+  <li>옥수수</li>
+</ul>
+
+<p>검정색 사각형 모양</p>
+<ul style="list-style-type: square">
+  <li>감자</li>
+  <li>상추</li>
+  <li>고구마</li>
+</ul>
+
+
+<h1>순서가 있는 리스트</h1>
+	<p>숫자 (기본설정)</p>
+		<ol>
+			<li>사과</li>
+			<li>멜론</li>
+			<li>바나나</li>
+		</ol>
+
+	<p>영어 대문자</p>
+		<ol style="list-style-type: upper-alpha">
+			<li>수박</li>
+			<li>참외</li>
+			<li>옥수수</li>
+		</ol>
+
+	<p>영어 소문자</p>
+		<ol style="list-style-type: lower-alpha">
+			<li>감자</li>
+			<li>상추</li>
+			<li>고구마</li>
+		</ol>
+
+	<p>로마자 대문자</p>
+		<ol style="list-style-type: upper-roman">
+			<li>오이</li>
+			<li>배추</li>
+			<li>시금치</li>
+		</ol>
+
+	<p>로마자 소문자</p>
+		<ol style="list-style-type: lower-roman">
+			<li>고추</li>
+			<li>호박</li>
+			<li>양파</li>
+		</ol>
+
+    <dl>
+
+    <dt>호박</dt>
+    <dd>- 박과의 한해살이 덩굴성 채소</dd>
+    <dt>상추</dt>
+    <dd>- 국화과의 한해살이 또는 두해살이풀</dd>
+
+</dl>
+</body>
