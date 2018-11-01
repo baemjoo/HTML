@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html lang="ko">
+
+
+<head>
+	<meta charset="UTF-8">
+	<title>HTML 수직프레임</title>
+</head>
+
+<!-- 수직이 아니라 수평으로 나누고 싶을 때는 cols-> rows로 -->
+<!-- ex)
+<frameset rows="20%,60%,20%">
+<frame name="top" src="/html/intro" noresize="noresize" />
+
+이러한 요소를 추가해 주면 될 듯 싶다.
+ -->
+<frameset cols="25%,*,25%">
+<frame name="left" src="file:///C:/Users/bmj/Desktop/Web_HTML/181029.html"/>
+<frame name="center" src="file:///C:/Users/bmj/Desktop/Web_HTML/181030.html"/>
+<frame name="right" src="file:///C:/Users/bmj/Desktop/Web_HTML/181101.html"/>
+<noframes>
+	<body>
+		이 브라우저는 frame태그를 지원하지 않습니다!
+	</body>
+</noframes>
+</frameset>
+</html>
+
+
+<!--이 문서 안에 뭔가를 첨부했을 때 원했던 페이지가 안나옴
+그 이유에 대해서 나중에 알아보자 -->
