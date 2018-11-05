@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5 Input Attributes</title>
+</head>
+
+<body>
+
+	<h1>autocomplete 속성을 이용한 자동 완성</h1>
+  <h2>autocomplete 속성은 form 의 요소나 input요소에 입력된 정보를 저장할지 안할지 명시.</h2>
+	<form action="/examples/media/request.php" autocomplete="on">
+		이름 : <input type="text" name="name"><br>
+		나이 : <input type="number" name="age" min="1" max="99" autocomplete="off"><br><br>
+		<a href="/html/intro">HTML 수업</a>
+		<p>input 요소에 데이터를 입력하고 전송 버튼을 누른 후에 F5키를 눌러 보세요!<br>
+		그리고 나서 같은 정보를 입력하려고 하면 이전 데이터가 아래에 팝업될 거에요!</p>
+		<input type="submit" value="전송">
+	</form>
+
+
+  <h1>novalidate 속성을 이용한 유효성 검사 여부 명시</h1>
+
+	<form action="/examples/media/request.php">
+		여러분이 자주 들리는 사이트의 URL 주소를 입력해 주세요 :<br><br>
+		<input type="url" name="url">
+		<input type="submit" value="전송"><br>
+	</form>
+
+	<p><br>novalidate 속성을 적용하면 클라이언트 측의 유효성 검사를 건너뛸 수 있습니다.</p>
+	<form action="/examples/media/request.php" novalidate>
+		여러분이 자주 들리는 사이트의 URL 주소를 입력해 주세요 :<br><br>
+		<input type="url" name="url">
+		<input type="submit" value="전송">
+	</form>
+
+  <h1>autofocus 속성을 이용한 오토 포커싱</h1>
+
+	<form action="/examples/media/request.php">
+		사용자 : <input type="text" name="username"><br>
+		비밀번호 : <input type="password" name="password" autofocus><br><br>
+		<input type="submit" value="전송">
+	</form>
+	<p>페이지 로드 시 자동으로 포커스가 비밀번호를 입력하는 input 요소에 가도록 합니다.</p>
+
+  <h1>formenctype 속성</h1>
+  <h2>data를 암호화하여 전송</h2>
+	<form action="/examples/media/request_enctype.php" method="post">
+		사용자 이름을 입력해주세요 : <input type="text" name="username"><br><br>
+		<input type="submit" value="암호화하여 전송" formenctype="multipart/form-data"><br>
+	</form>
+
+  <h1>formtarget 속성</h1>
+  <h2>하이퍼링크를 여는 것 처럼 똑같이 적용시키는 방식</h2>
+	<form action="/examples/media/request.php">
+		사용자 이름을 입력해주세요 : <input type="text" name="username"><br><br>
+		<input type="submit" value="전송">
+		<input type="submit" value="응답 화면을 새창에 표시" formtarget="_blank"><br>
+	</form>
+
+
+  <h1>height와 width 속성을 이용한 이미지의 크기 설정</h1>
+  <h2>이 속성은 오직 image 타입에서만 사용할 수 있습니다.</h2>
+<form action="/examples/media/request.php">
+  사용자 : <input type="text" name="username"><br>
+  비밀번호 : <input type="password" name="password" autofocus><br><br>
+  <input type="image" src="/examples/images/img_penguin.png" alt="전송" height="26" width="26">
+  그림을 클릭하시면 전송됩니다!
+</form>
+
+
+
+	<h1>list 속성을 이용한 datalist 요소</h1>
+
+	<form action="/examples/media/request.php">
+		<input list="lectures" name="lecture">
+			<datalist id="lectures">
+				<option value="HTML">
+				<option value="CSS">
+				<option value="JAVA">
+				<option value="C++">
+			</datalist>
+		<input type="submit" value="전송">
+	</form>
+
+
+  <h1>pattern 속성을 이용한 입력 형식 제한</h1>
+  <!--
+  1. [a-zA-Z0-9] : 영문 소문자나 영문 대문자, 숫자 중 어느 것이라도 개수에 상관없이 나올 수 있음.
+  2. [@] : '@' 문자만이 나와야 함.
+  3. [.] : '.' 문자만이 나와야 함.
+  4. [.]* : '.' 문자가 나와도 되고 나오지 않아도 됨.
+  5. [a-zA-Z0-9]* : 영문 소문자나 영문 대문자, 숫자 중 어느 것이라도 개수에 상관없이 나와도 되고 나오지 않아도 됨.
+ -->
+	<form action="/examples/media/request.php">
+		여러분의 이메일 주소를 입력해 주세요 :<br><br>
+		<input type="email" name="email"
+			pattern="[a-zA-Z0-9]+[@][a-zA-Z0-9]+[.]+[a-zA-Z]+[.]*[a-zA-Z]*" title="이메일 양식">
+		<input type="submit" value="전송">
+	</form>
+
+ <form action="/examples/media/request.php">
+    사용자 : <input type="text" name="username" placeholder="홍길동"><br>
+    비밀번호 : <input type="password" name="password" placeholder="1234"><br><br>
+</form>
+
+<form action="/examples/media/request.php">
+    여러분이 가장 좋아하는 숫자는 몇인가요? (단, -30부터 30사이에서 5단위로 골라주세요!)<br><br>
+    <input type="number" name="favnum" min="-30" max="30" step="5"><br><br>
+</form>
+
+<h1>video 요소를 이용한 동영상 삽입</h1>
+<video style="width:576px; height:360" controls>
+  <source src="/examples/media/sample_video_mp4.mp4" type="video/mp4">
+  <source src="/examples/media/sample_video_ogg.ogg" type="video/ogg">
+  이 문장은 사용자의 웹 브라우저가 video 요소를 지원하지 않을 때 나타납니다!
+</video>
+
+<h1>비디오 속성에 대한 정보</h1>
+<a href="http://tcpschool.com/html/html5_multimedia_video">링크</a><br><br>
+
+<h1>오디오 속성에 대한 정보</h1>
+<a href="http://tcpschool.com/html/html5_multimedia_audio">링크</a><br><br>
+
+</body>
