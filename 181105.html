@@ -121,6 +121,18 @@
 <a href="http://tcpschool.com/html/html5_multimedia_video">링크</a><br><br>
 
 <h1>오디오 속성에 대한 정보</h1>
-<a href="http://tcpschool.com/html/html5_multimedia_audio">링크</a><br><br>
+<a href="http://tcpschool.com/html/html5_multimedia_video">링크</a><br><br>
 
-</body>
+<h1>server sent events를 이용한 자동 갱신</h1>
+
+<div id="result"></div>
+<script>
+  if(typeof(EventSource) !== "undefined") {
+    var source = new EventSource("file:///C:/Users/bmj/Desktop/Web_HTML/181105_server.html");
+    source.onmessage = function(event) {
+      document.getElementById("result").innerHTML += event.data + "<br>";
+    };
+  } else {
+    document.getElementById("result").innerHTML = "이 문장은 사용자의 웹 브라우저가 Server Sent Events를 지원하지 않을 때 나타납니다!";
+  }
+</script>
